@@ -1,13 +1,42 @@
-<!DOCTYPE html>
-<html lang="ko">
-<head>
+{% extends 'base.html' %}
 
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
-</head>
-<body>
-    <h1>안녕하세요. 멋쟁이 사자처럼 7기 정민지 입니다.</h1>
-</body>
-</html>
+{% block content %}
+              <main role="main">
+              
+                <!-- Main jumbotron for a primary marketing message or call to action -->
+                <div class="jumbotron">
+                  <div class="container">
+                    <p>
+                    <p></p>  
+                    <h1 class="display-3">Hello.lion</h1>
+                    <p></p>
+                    <p>과제 제출-1</p>
+                    <p>멋쟁이 사자처럼 7기 경희대 정민지</p>
+                    <p>tymjlov9212@likelion.org</p>
+                    <!--<p><a class="btn btn-primary btn-lg" href="#" role="button">Learn more &raquo;</a></p>-->
+                
+                  </div>
+                </div>
+              
+                  <div class="container">      
+                    <div class="row">
+                      
+                      {% for blog in blogs.all%}
+                        <div class="col-md-4" style='display:inline-block;'>
+                          <h2></h2>
+                          <h3><span style="color:rgb(73,160,181)">{{ blog.title }}</h3></p>
+                          <h9>{{ blog.pub_date }}</h>
+                          <p></p>
+                          <p>{{ blog.summary }}...</a></p>
+                          <p><a class="btn btn-outline-dark" href="{% url 'detail' blog.id %}" role="button">View details &raquo;</a></p>
+                        </div>
+                      {% endfor %}
+                    
+                  
+                    </div>
+                  </div>
+                
+                  
+              
+                
+{% endblock %}

@@ -19,6 +19,10 @@ import minjee.views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('',minjee.views.hello, name='hello'),
+    path('', minjee.views.hello, name='hello'),
+    path('<int:blog_id>/', minjee.views.detail, name='detail'),
+    path('new/', minjee.views.new, name='new'),
+    path('create/', minjee.views.create, name ='create'),
+    path('<int:blog_id>/delete/', minjee.views.delete, name='delete'),
 
 ]
