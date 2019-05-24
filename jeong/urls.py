@@ -24,5 +24,5 @@ urlpatterns = [
     path('new/', minjee.views.new, name='new'),
     path('create/', minjee.views.create, name ='create'),
     path('<int:blog_id>/delete/', minjee.views.delete, name='delete'),
-
+    path('<int:blog_id>/update', minjee.views.update, name="update"),
 ]
