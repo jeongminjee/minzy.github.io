@@ -4,15 +4,15 @@
 
 
 <div class="container jumbotron">
-        <form action="{% url 'update' blogupdate.id %}">
+        <form action="{% url 'updatesend' blogupdate.id %}">
             <h2>제목:<input type="text" value={{blogupdate.title}} name="updateTitle"></h1>
             <input type ="text" name ="title">
             <br>
             <br>
-            <h2>본문: <br><textarea cols = 40 rows = 20 name="body"></textarea></h2>
+            <h2>본문: <br><textarea cols = 40 rows = 20 name="updateBody">{{blogupdate.body}}</textarea></h2>
             <br>
             <br>
-            <input class="btn btn-dark" type="submit" value="제출하기">
+            <input class="btn btn-dark" type="submit" value="수정하기">
      
             
         
@@ -23,4 +23,4 @@
 
 
 
-    {% endblock %}
+{% endblock %}

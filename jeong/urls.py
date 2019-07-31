@@ -17,6 +17,7 @@ from django.contrib import admin
 from django.urls import path
 import minjee.views
 
+
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', minjee.views.hello, name='hello'),
@@ -24,5 +25,7 @@ urlpatterns = [
     path('new/', minjee.views.new, name='new'),
     path('create/', minjee.views.create, name ='create'),
     path('<int:blog_id>/delete/', minjee.views.delete, name='delete'),
-    path('<int:blog_id>/update', minjee.views.update, name="update"),
+    path('<int:blog_id>/update/', minjee.views.update, name="update"),
+    path('<int:blog_id>/updatesend/', minjee.views.updatesend, name="updatesend"),
+  
 ]
